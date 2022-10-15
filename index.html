@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill in the blanks</title>
+    <style>
+        * {
+            letter-spacing: 2px;
+            font-weight: 600;
+            background: #F0FFF0;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+        }
+
+        .info-give ul {
+            list-style: none;
+        }
+
+        .info-give ul li {
+            padding: 7px;
+        }
+
+        #add {
+            float: right;
+            text-decoration: none;
+        }
+
+        .info-give ul li input {
+            padding: 9px;
+            display: block;
+            /* float: right; */
+        }
+
+        .info-give ul button {
+            margin-top: 10px;
+            padding: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            transition-duration: 0.4s;
+        }
+
+        .info-give ul button:hover {
+            background-color: white;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Fill in the blanks:</h1>
+    </div>
+    <div class="info">
+        <div class="info-give">
+            <ul>
+                <li>Name : <input oninput="student(this)" class="name" type="text" placeholder="Enter your Name"></li>
+                <li>Qualification : <input oninput="Qualification(this)" class="qualification" type="text" placeholder="Enter your Qualification">
+                </li>
+                <li class="newone">Hobbies : <input oninput="hobbies(this)" class="hobbies" type="text" placeholder="Enter your Hobbies"><br></li>
+                <a href="#" id="add">+Add Hobbies</a>
+                <li><button onClick="window.location.reload();">Clear</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="valur">
+        <div class="sentence">
+            <p>
+                I, <span class="input-name">______</span> , would like to apply for an internship at your organisation.<br>
+                My Qualification is <span class="input-qualification">__________</span>.<br>
+                My hobbies are <span class="input-hobbies">__________</span>.<br>
+                <br>
+                Thanking you,<br>
+                Your Sincerely
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
